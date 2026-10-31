@@ -21,9 +21,8 @@ python3 -m http.server 4173 --directory guardian-site
 
 ## Deploy
 
-```sh
-CLOUDFLARE_API_TOKEN="$(security find-generic-password -a john-darabos -s openclaw-cloudflare-api-token -w)" \
-  npx wrangler pages deploy guardian-site --project-name guardiantalk --branch main
-```
+The `main` branch publishes through GitHub Pages to `https://guardiantalk.com`.
+The family dashboard is deployed separately from `../guardian-dashboard-site` to
+`https://dashboard.guardiantalk.com`.
 
 The public download CTA currently routes to the early-access email flow until signed Mac and Windows installers exist.
