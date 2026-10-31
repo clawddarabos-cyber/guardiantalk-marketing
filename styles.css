@@ -32,6 +32,8 @@ img { max-width: 100%; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 italic 21px/1 "DejaVu Sans", Arial, sans-serif; letter-spacing: -.045em; }
 .brand img { display: block; width: auto; border-radius: 6px; }
+.brand .brand-logo { width: 160px; height: auto; border-radius: 0; }
+.brand-footer .brand-logo { width: 180px; }
 .brand-name { color: var(--gt-ink); white-space: nowrap; }
 .talk-accent { color: var(--gt-gold); }
 .desktop-nav { display: flex; gap: 34px; margin-left: auto; margin-right: 14px; }
@@ -132,6 +134,8 @@ h1 em { color: #08777A; font-style: normal; }
 
 @media (max-width: 680px) {
   .shell { width: min(100% - 28px, 1180px); }.site-header { padding-top: 15px; }.button-small { display: none; }
+  .brand .brand-logo { width: 142px; }
+  .brand-footer .brand-logo { width: 170px; }
   .nav-actions { margin-left: auto; }
   .sign-in-link { padding: 10px 2px; }
   .hero { padding: 126px 0 72px; }.hero-grid { gap: 38px; } h1 { font-size: 48px; }.hero-lede { font-size: 16px; }.hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }.trust-row { gap: 11px 15px; }
