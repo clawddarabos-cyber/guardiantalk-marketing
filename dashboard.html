@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10242A" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/guardiantalk-app-icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="canonical" href="https://dashboard.guardiantalk.com/" />
+    <title>Family dashboard — GuardianTalk</title>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-nav">
+      <div class="shell nav-wrap">
+        <a class="brand" href="https://guardiantalk.com/"><img src="/assets/guardiantalk-symbol.svg" width="63" height="46" alt="" /><span class="brand-name">Guardian<span class="talk-accent">Talk</span></span></a>
+        <div class="dashboard-nav-actions"><span class="early-pill">Private early access</span><button class="plain-button" id="forget-key" hidden>Forget this browser</button></div>
+      </div>
+    </header>
+
+    <main class="dashboard-main shell">
+      <section class="dashboard-intro">
+        <div><span class="kicker">Family dashboard</span><h1>One calm view of the day.</h1><p>Pair a visible GuardianTalk installation on your child’s Mac or PC. Only summarized app and domain time appears here.</p></div>
+        <div class="dashboard-privacy"><strong>Designed against hidden surveillance</strong><span>No screenshots, keystrokes, messages, searches, page paths, or content.</span></div>
+      </section>
+
+      <div class="dashboard-alert" id="dashboard-alert" role="status" hidden></div>
+
+      <section class="onboarding-card" id="create-panel">
+        <div><span class="kicker">Start free</span><h2>Create your family dashboard</h2><p>This early version uses a private recovery key instead of a password. Save it somewhere secure; GuardianTalk cannot recover it yet.</p></div>
+        <form id="family-form" class="family-create-form">
+          <label><span>Family name</span><input name="familyName" maxlength="80" placeholder="The Darabos family" required /></label>
+          <label><span>Parent email</span><input name="email" type="email" maxlength="254" placeholder="you@example.com" required /></label>
+          <button class="button button-primary" type="submit">Create free dashboard <span>→</span></button>
+          <small>Creating a dashboard means you agree to use GuardianTalk openly and lawfully on devices you are authorized to manage.</small>
+        </form>
+      </section>
+
+      <section id="recovery-panel" class="recovery-card" hidden>
+        <div><span class="kicker">Save this once</span><h2>Your private recovery key</h2><p>This key controls your family dashboard. It is shown only now and is stored in this browser.</p></div>
+        <div class="recovery-key-wrap"><code id="recovery-key"></code><button class="plain-button" id="copy-recovery">Copy key</button></div>
+        <label class="confirm-save"><input type="checkbox" id="saved-key" /> I saved this key somewhere secure.</label>
+        <button class="button button-dark" id="continue-dashboard" disabled>Continue to dashboard</button>
+      </section>
+
+      <section id="family-dashboard" hidden>
+        <div class="family-dashboard-head"><div><span class="kicker">Today</span><h2 id="family-name">Your family</h2></div><button class="button button-small button-dark" id="new-pairing">Generate pairing code</button></div>
+        <div class="pair-device-card" id="pair-card">
+          <div><span>Pair a Mac or PC</span><strong id="pair-code">--------</strong><small id="pair-expiry">Generate a new 15-minute code</small></div>
+          <ol><li>Open GuardianTalk on the child’s computer.</li><li>Use the Family connection section.</li><li>Enter this code while everyone can see what is shared.</li></ol>
+        </div>
+        <div class="device-grid" id="device-grid"></div>
+        <div class="empty-family" id="empty-family"><img src="/assets/guardiantalk-app-icon-1024.png" width="60" height="60" alt="" /><strong>No computers paired yet</strong><p>Generate a pairing code and enter it in GuardianTalk on a Mac or PC.</p></div>
+      </section>
+    </main>
+    <script src="/dashboard.js" defer></script>
+  </body>
+</html>

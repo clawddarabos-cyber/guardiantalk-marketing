@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GuardianTalk shield mark">
+  <defs><linearGradient id="g" x1="10" y1="4" x2="54" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#9CF0C0"/><stop offset="1" stop-color="#48A679"/></linearGradient></defs>
+  <path d="M32 3.8 55 12v17.1c0 14.1-8.5 25.6-23 31.1C17.5 54.7 9 43.2 9 29.1V12l23-8.2Z" fill="url(#g)"/>
+  <path d="M32 10.7 48.5 16v13c0 9.9-5.6 18.1-16.5 23-10.9-4.9-16.5-13.1-16.5-23V16L32 10.7Z" fill="#123C3A"/>
+  <path d="m23 31 6 6 12-13" fill="none" stroke="#B9F2D1" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

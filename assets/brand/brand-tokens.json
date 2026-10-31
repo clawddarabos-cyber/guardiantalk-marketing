@@ -1,0 +1,16 @@
+{
+  "name": "GuardianTalk",
+  "domain": "GuardianTalk.com",
+  "version": "1.1 developer handoff",
+  "colors": {
+    "teal": "#00CDD1",
+    "gold": "#FFC51E",
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "ink": "#10242A"
+  },
+  "primary_logo": "GuardianTalk_Primary_Dark.svg",
+  "app_icon": "GuardianTalk_App_Icon_Bordered.svg",
+  "reference": "GuardianTalk_Approved_Reference_Tight.png",
+  "note": "SVGs are vector approximations of the approved reference, not exact pixel tracings; review wordmark before release."
+}
